@@ -1,0 +1,17 @@
+smoke:
+  config:
+    name: "upload-sync-a"
+    extraFlags:
+      - --filesize=200000
+      - --timeout=1600
+      - --pushsync-delay
+      - --sync-mode=pushsync
+      - --debug
+      - --http-port=8500
+      - --verbosity=5
+      - --sync-delay=false
+      - upload_and_sync
+  # Image configuration
+  image:
+    repository: 192.168.0.80:5000/swarm
+    tag: edge-alltools

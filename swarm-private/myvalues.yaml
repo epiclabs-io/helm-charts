@@ -1,0 +1,49 @@
+bootnode:
+  image:
+    repository: 192.168.0.80:5000/swarm
+    tag: edge-alltools
+swarm:
+  replicaCount: 20
+  image:
+    repository: 192.168.0.80:5000/swarm
+    tag: edge-alltools
+  ingress:
+    exposeWebsocketRPC: true
+  config:
+    ens_api: test:112234455c3a32fd11230c42e7bccd4a84e02010@http://ropsten-geth-geth.geth:8545
+    extraFlags:
+      - --ws
+      - --wsaddr=0.0.0.0
+      - --sync-mode=push
+      - --wsorigins=*
+      - --wsapi=admin,net,debug,bzz,stream,accounting
+      - --store.cache.size=10000
+      - --vmodule=swarm/network/*=5,swarm/storage/*=5,swarm/pushsync/*=5,swarm/pss/*=5
+
+grafana:
+  dashboards:
+    default:
+      smoke:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/smoke.json
+      ldbstore:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/ldbstore.json
+      swarm:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/swarm.json
+      upload-speed:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/upload-speed.json
+      sliding:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/smoke-sliding.json
+      kad:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/kad.json
+      fetchers:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/fetchers.json
+      timeouts:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/timeouts.json
+      p2p:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/p2p.json
+      pushsync:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/pushsync.json
+      runtime:
+        url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/runtime.json
+      pss-pushync:
+        url: https://raw.githubusercontent.com/epiclabs-io/swarm-helm-charts/master/swarm-private/grafana-dashboards/pss-pushsync.json
