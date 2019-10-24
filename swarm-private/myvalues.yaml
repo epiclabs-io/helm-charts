@@ -46,4 +46,4 @@ grafana:
       runtime:
         url: https://raw.githubusercontent.com/ethersphere/grafana-dashboards/master/runtime.json
       pss-pushync:
-        url: https://raw.githubusercontent.com/epiclabs-io/swarm-helm-charts/master/swarm-private/grafana-dashboards/pss-pushsync.json
+        url: https://raw.githubusercontent.com/epiclabs-io/swarm-helm-charts/charts-fix/swarm-private/grafana-dashboards/pss-pushsync.json
