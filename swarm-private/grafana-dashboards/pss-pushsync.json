@@ -15,8 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": 12,
-  "iteration": 1571924082903,
+  "iteration": 1572359655377,
   "links": [],
   "panels": [
     {
@@ -93,7 +92,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "swarm.pss.handle.num.count",
+          "measurement": "swarm.pss.handle.span",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
@@ -102,7 +101,7 @@
             [
               {
                 "params": [
-                  "value"
+                  "count"
                 ],
                 "type": "field"
               },
@@ -248,7 +247,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "swarm.pss.process.num.count",
+          "measurement": "swarm.pss.process.span",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "C",
@@ -257,7 +256,7 @@
             [
               {
                 "params": [
-                  "value"
+                  "count"
                 ],
                 "type": "field"
               },
@@ -403,7 +402,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "swarm.pss.enqueue.num.count",
+          "measurement": "swarm.pss.enqueue.span",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "D",
@@ -412,7 +411,7 @@
             [
               {
                 "params": [
-                  "value"
+                  "count"
                 ],
                 "type": "field"
               },
@@ -558,7 +557,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "swarm.pss.forward.count",
+          "measurement": "swarm.pss.forward.time.span",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "D",
@@ -567,7 +566,7 @@
             [
               {
                 "params": [
-                  "value"
+                  "count"
                 ],
                 "type": "field"
               },
@@ -713,7 +712,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "swarm.pss.pubsub.send.num.count",
+          "measurement": "swarm.pss.pubsub.send.span",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
@@ -722,7 +721,7 @@
             [
               {
                 "params": [
-                  "value"
+                  "count"
                 ],
                 "type": "field"
               },
@@ -868,7 +867,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "swarm.pss.pp.send.count",
+          "measurement": "swarm.pss.pp.send.span",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
@@ -877,7 +876,7 @@
             [
               {
                 "params": [
-                  "value"
+                  "count"
                 ],
                 "type": "field"
               },
@@ -5531,5 +5530,5 @@
   "timezone": "",
   "title": "Pushync - PSS",
   "uid": "RO531roWk",
-  "version": 24
+  "version": 1
 }
